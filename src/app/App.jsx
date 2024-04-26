@@ -1,4 +1,4 @@
-import './App.css'
+import './styles/App.css'
 
 export const App = () => {
   return (
@@ -7,4 +7,5 @@ export const App = () => {
     </>
   )
 }
+
 export default App;
