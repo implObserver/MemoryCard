@@ -1,0 +1,9 @@
+.person {
+    width: min-content;
+    transition: transform 1s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.close {
+    transform: perspective(400px) rotateY(180deg);
+}

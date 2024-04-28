@@ -1,7 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
+import { cardReducer } from "../entities/personCard";
 
 export const store = configureStore({
-    reducer: {},
+    reducer: {
+        card: cardReducer,
+    },
 })
 
 console.log(store)

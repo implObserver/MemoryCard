@@ -1,0 +1,1 @@
+export { Front as FrontSide } from "./ui/Front";

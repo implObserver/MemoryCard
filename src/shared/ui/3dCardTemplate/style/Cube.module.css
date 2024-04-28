@@ -1,0 +1,5 @@
+.card {
+    width: 10vh;
+    transform-style: preserve-3d;
+    transition: 2s transform ease-in-out;
+}
