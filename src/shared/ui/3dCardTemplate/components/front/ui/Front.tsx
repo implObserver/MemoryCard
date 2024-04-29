@@ -1,17 +1,12 @@
 import styles from '../style/Front.module.css'
 
-export const Front = () => {
+export const Front = ({ props }) => {
     return (
-        <div className={styles.front}
-            style={{
-                backgroundImage: `url(https://images.vector-images.com/clipart/xl/181/10_clubs.jpg)`,
-                backgroundPosition: 'center',
-                backgroundSize: 'cover',
-                backgroundRepeat: 'no-repeat'
-            }}></div>
+        <div className={styles.front}>
+            <img src={props.url} alt={props.alt} />
+        </div>
     )
 }
-
 
 /*
 style={{

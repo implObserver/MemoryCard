@@ -9,7 +9,8 @@ export const PersonCard = () => {
     const dispath = useDispatch();
 
     return (
-        <div className={`${styles.person} ${isCheck ? styles.close : ''}`}
+        <div
+            className={`${styles.person} ${isCheck ? styles.close : ''}`}
             onClick={() => dispath(check())}>
             <Card></Card>
         </div>
