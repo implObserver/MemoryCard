@@ -1,7 +1,5 @@
 .back {
     position: absolute;
-    width: 10vh;
-    height: 15vh;
-    border-radius: min(1vh, 1vw);
-    background-color: purple;
+    width: inherit;
+    height: inherit;
 }

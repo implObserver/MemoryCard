@@ -1,0 +1,10 @@
+.flipper {
+    display: grid;
+    transition: transform 0.3s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.close {
+    pointer-events: none;
+    transform: perspective(400px) rotate3d(0, 1, 0, 180deg);
+}

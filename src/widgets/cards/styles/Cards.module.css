@@ -1,0 +1,12 @@
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: min(3vw, 3vh);
+    width: 90vw;
+    padding: 1vw;
+}
+
+.block {
+    pointer-events: none;
+}

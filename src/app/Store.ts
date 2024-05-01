@@ -1,9 +1,15 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { cardReducer } from "../entities/personCard";
+import { cardsReducer } from "../widgets/cards";
+import { cardReducer } from "../features/cardsFlipper";
+import { ScoreReducer } from "../features/scoreCounter";
+import { comparatorReducer } from "../features/cardsComparator";
 
 export const store = configureStore({
     reducer: {
         card: cardReducer,
+        cardsContainer: cardsReducer,
+        score: ScoreReducer,
+        comparator: comparatorReducer,
     },
 })
 

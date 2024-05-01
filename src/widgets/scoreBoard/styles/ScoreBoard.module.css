@@ -1,0 +1,4 @@
+.scoreBoard {
+    display: grid;
+    justify-self: left;
+}

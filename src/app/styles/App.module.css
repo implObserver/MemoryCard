@@ -9,6 +9,20 @@
 }
 
 .app {
-    height: 100vh;
-    padding: min(10vw, 10vh);
+    display: grid;
+    padding: min(5vw, 5vh);
+    justify-content: center;
+    background-image: url(../../shared/assets/desktopWallpaper.jpg);
+    background-color: azure;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-weight: 900;
+    text-shadow: 2px 0 #fff, -1px 0 #fff, 0 1px #fff, 0 -1px #fff,
+        1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+}
+
+@media screen and (max-aspect-ratio: 0.9/1) {
+    .app {
+        background-image: url(../../shared/assets/smartPhoneWallpaper.jpg);
+    }
 }

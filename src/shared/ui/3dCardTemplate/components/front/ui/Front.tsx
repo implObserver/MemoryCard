@@ -1,18 +1,11 @@
+import { useThisContext } from '../../../../../../widgets/cards/lib/context/Context'
 import styles from '../style/Front.module.css'
 
-export const Front = ({ props }) => {
+export const Front = () => {
+    const props = useThisContext();
     return (
         <div className={styles.front}>
-            <img src={props.url} alt={props.alt} />
+            <img src={props.frontUrl} alt={''} />
         </div>
     )
 }
-
-/*
-style={{
-    backgroundImage: `url(${url})`,
-    backgroundPosition: 'center',
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat'
-}}
-*/

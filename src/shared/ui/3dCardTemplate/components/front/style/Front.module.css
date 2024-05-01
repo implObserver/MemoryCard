@@ -1,12 +1,16 @@
 .front {
     position: absolute;
-    width: 10vh;
-    height: 15vh;
+    width: inherit;
+    height: inherit;
     transform: translateZ(min(1vh, 1px));
-    border-radius: min(1vh, 1vw);
+    background-image: url(../../../../../assets/Loading.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 1vh;
 }
 
 img {
+    border-radius: 1vh;
     width: inherit;
     height: inherit;
 }

@@ -1,0 +1,1 @@
+export { default as comparatorReducer } from './models/slice/slice'

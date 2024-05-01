@@ -1,0 +1,1 @@
+export const backUrl = 'https://i.pinimg.com/736x/37/17/24/3717242635eb3336ec720d5454b647c8.jpg';
