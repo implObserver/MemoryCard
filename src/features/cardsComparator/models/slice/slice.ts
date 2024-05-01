@@ -1,5 +1,4 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { addNewCardsAsync } from "../../../../widgets/cards/models/slice/slice";
 
 interface CardsComparator {
     ids: Array<String>,

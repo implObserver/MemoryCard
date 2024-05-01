@@ -2,20 +2,18 @@ import { useDispatch, useSelector } from "react-redux"
 import { RootState } from "../../../app/Store"
 import styles from '../styles/Flipper.module.css'
 import { PersonCard } from "../../../entities/personCard";
-import { changed, close, open, setId } from "../models/slice/slice";
-import { useEffect, useState } from "react";
-import { shuffleCards } from "../../../widgets/cards/models/slice/slice";
-import { useThisContext } from "../../../widgets/cards/lib/context/Context";
-import { addId, compareId } from "../../cardsComparator/models/slice/slice";
+import { close, open } from "../models/slice/slice";
+import { useEffect} from "react";
+import { compareId } from "../../cardsComparator";
+import { useCardsContainerContext } from "../../../widgets/cards";
 
 export const Card = () => {
     const state = useSelector((state: RootState) => state.card.cardFlipper);
     const dispath = useDispatch();
-    const props = useThisContext();
+    const props = useCardsContainerContext();
 
     const clickHandle = () => {
         dispath(compareId(props.id));
-       // dispath(addId(props.id));
         flipCards();
     }
 

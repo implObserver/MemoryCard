@@ -1,16 +1,13 @@
+import styles from '../styles/Cards.module.css';
+import { useEffect, useState } from "react";
 import { addNewCardsAsync, shuffleCards } from "../models/slice/slice";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispath, RootState } from "../../../app/Store";
-import styles from '../styles/Cards.module.css';
-import { PersonCard } from "../../../entities/personCard";
 import { Context } from "../lib/context/Context";
-
-import { useEffect, useState } from "react";
 import { Card } from "../../../features/cardsFlipper";
-import { changed, close, open } from "../../../features/cardsFlipper/models/slice/slice";
-import { increments, remove, setBest } from "../../../features/scoreCounter/model/slice/slice";
-import { Root } from "react-dom/client";
-import { compareId, removeIds } from "../../../features/cardsComparator/models/slice/slice";
+import { removeIds } from "../../../features/cardsComparator";
+import { increments, remove, setBest } from "../../../features/scoreCounter";
+
 
 export const Cards = () => {
     const cardsProps = useSelector((state: RootState) => state.cardsContainer.imagesUrls);
@@ -59,8 +56,10 @@ export const Cards = () => {
     }
 
     return (
-        <div className={`${styles.cards} ${isBlock ? styles.block : ''}`}
-            onClick={clickHandle}>
+        <div
+            className={`${styles.cards} ${isBlock ? styles.block : ''}`}
+            onClick={clickHandle}
+        >
             {fillInTheCards()}
         </div>
     )

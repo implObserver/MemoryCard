@@ -1,4 +1,4 @@
-import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 interface Score {
     score: number,
@@ -20,7 +20,7 @@ const scoreSlice = createSlice({
         remove: (state) => {
             state.score = 0;
         },
-        setBest: (state, action: PayloadAction<number>) => {
+        setBest: (state) => {
             state.best = state.score - 1;
         }
     }
