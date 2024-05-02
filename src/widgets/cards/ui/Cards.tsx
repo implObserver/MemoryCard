@@ -1,6 +1,6 @@
 import styles from '../styles/Cards.module.css';
 import { useEffect, useState } from "react";
-import { addNewCardsAsync, shuffleCards } from "../models/slice/slice";
+import { shuffleCards } from "../models/slice/slice";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispath } from "../../../app/Store";
 import { Context } from "../lib/context/Context";
@@ -8,6 +8,7 @@ import { Card } from "../../../features/cardsFlipper";
 import { removeIds } from "../../../features/cardsComparator";
 import { increments, remove, setBest } from "../../../features/scoreCounter";
 import { selectCards, selectComparator } from '../models/slice/selectors';
+import { addNewCardsAsync } from '../models/slice/thunks/loadCards/loadCardsThunk';
 
 
 export const Cards = () => {
