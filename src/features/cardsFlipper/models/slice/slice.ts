@@ -1,15 +1,5 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-
-interface CardState {
-    cardFlipper: boolean,
-    id: String,
-
-}
-
-const initialState: CardState = {
-    cardFlipper: true,
-    id: '',
-}
+import { initialState } from "./defaultState";
 
 const cardSlice = createSlice({
     name: "card",

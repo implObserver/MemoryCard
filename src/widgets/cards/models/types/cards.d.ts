@@ -17,3 +17,7 @@ interface CardProps {
     frontUrl: string,
     backUrl: string,
 }
+
+interface CardsState {
+    imagesUrls: Array<CardProps>;
+}

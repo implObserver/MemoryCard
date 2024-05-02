@@ -1,14 +1,5 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-
-interface CardsComparator {
-    ids: Array<String>,
-    isCompare: boolean,
-}
-
-const initialState: CardsComparator = {
-    ids: [],
-    isCompare: false,
-}
+import { initialState } from "./defaultState";
 
 const comparatorSlice = createSlice({
     name: "comparator",

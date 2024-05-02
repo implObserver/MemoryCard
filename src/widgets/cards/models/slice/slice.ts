@@ -1,14 +1,7 @@
 import { PayloadAction, createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { getCardsImages } from "../../lib/helpers/ImagesOfCards";
 import { shuffle } from "../../../../shared/lib/helpers/Shuffle";
-
-interface CardsState {
-    imagesUrls: Array<CardProps>;
-}
-
-const initialState: CardsState = {
-    imagesUrls: [],
-}
+import { initialState } from "./defaultState";
 
 const cardsSlice = createSlice({
     name: 'cards',

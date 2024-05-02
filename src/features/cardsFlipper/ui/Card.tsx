@@ -3,12 +3,13 @@ import { RootState } from "../../../app/Store"
 import styles from '../styles/Flipper.module.css'
 import { PersonCard } from "../../../entities/personCard";
 import { close, open } from "../models/slice/slice";
-import { useEffect} from "react";
+import { useEffect } from "react";
 import { compareId } from "../../cardsComparator";
 import { useCardsContainerContext } from "../../../widgets/cards";
+import { selectFlipper } from "../models/slice/selectors";
 
 export const Card = () => {
-    const state = useSelector((state: RootState) => state.card.cardFlipper);
+    const state = useSelector(selectFlipper);
     const dispath = useDispatch();
     const props = useCardsContainerContext();
 

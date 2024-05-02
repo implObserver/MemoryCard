@@ -1,14 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-
-interface Score {
-    score: number,
-    best: number,
-}
-
-const initialState: Score = {
-    score: 0,
-    best: 0,
-}
+import { initialState } from "./defaultState";
 
 const scoreSlice = createSlice({
     name: 'score',
@@ -21,7 +12,10 @@ const scoreSlice = createSlice({
             state.score = 0;
         },
         setBest: (state) => {
-            state.best = state.score - 1;
+            const correctlyScore = state.score - 1;
+            if (state.best < correctlyScore) {
+                state.best = correctlyScore;
+            }
         }
     }
 })

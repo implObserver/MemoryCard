@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { cardsReducer } from "../widgets/cards";
 import { cardReducer } from "../features/cardsFlipper";
 import { ScoreReducer } from "../features/scoreCounter";
 import { comparatorReducer } from "../features/cardsComparator";
+import { cardsReducer } from "../widgets/cards";
 
 export const store = configureStore({
     reducer: {
